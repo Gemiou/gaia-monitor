@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: "stations_map",
+  name: "stationsMap",
   path: "/stations-map",
   title: "Stations Map",
   layout: "default",

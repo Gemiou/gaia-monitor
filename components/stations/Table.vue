@@ -106,7 +106,9 @@ const rows = [
           <template v-slot:body="props">
             <q-tr :props="props">
               <q-td key="station" :props="props">
-                {{ props.row.station }}
+                <router-link :to="{ name: 'stationsMap' }" class="text-black">
+                  {{ props.row.station }}
+                </router-link>
               </q-td>
               <q-td key="location" :props="props">
                 {{ props.row.location }}

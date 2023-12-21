@@ -94,8 +94,8 @@ const text = ref("");
             clickable
             v-ripple
             exact
-            :to="{ name: 'stations_map' }"
-            :active="route.name === 'stations_map'"
+            :to="{ name: 'stationsMap' }"
+            :active="route.name === 'stationsMap'"
             active-class="active-menu-link"
           >
             <q-item-section avatar>
