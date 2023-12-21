@@ -1,7 +1,8 @@
 <script lang="ts" setup>
+const route = useRoute();
 const leftDrawerOpen = ref(true);
+const miniDrawer = ref(false);
 const text = ref("");
-const menulink = ref("overview");
 </script>
 
 <template>
@@ -28,8 +29,9 @@ const menulink = ref("overview");
           bg-color="white"
           square
           dense
-          input-class=" q-px-lg"
-          placeholder="Station name"
+          input-style="width:300px"
+          input-class="q-px-lg"
+          placeholder="Station name or location"
         >
           <template v-slot:append>
             <q-icon
@@ -38,8 +40,9 @@ const menulink = ref("overview");
               @click="text = ''"
               class="cursor-pointer"
             />
-            <q-icon name="search" class="q-pr-md" /> </template
-        ></q-input>
+            <q-icon name="search" class="q-pr-md" />
+          </template>
+        </q-input>
         <q-space></q-space>
 
         <q-btn dense icon="notifications" flat stretch>
@@ -65,10 +68,10 @@ const menulink = ref("overview");
       </q-toolbar>
     </q-header>
     <q-drawer
+      :mini="miniDrawer"
       show-if-above
       :width="250"
       v-model="leftDrawerOpen"
-      side="left"
       bordered
       class="sidebar"
     >
@@ -79,8 +82,7 @@ const menulink = ref("overview");
             v-ripple
             exact
             :to="{ name: 'overview' }"
-            :active="menulink === 'overview'"
-            @click="menulink = 'overview'"
+            :active="route.name === 'overview'"
             active-class="active-menu-link"
           >
             <q-item-section avatar>
@@ -93,8 +95,7 @@ const menulink = ref("overview");
             v-ripple
             exact
             :to="{ name: 'stations' }"
-            :active="menulink === 'stations'"
-            @click="menulink = 'stations'"
+            :active="route.name === 'stations'"
             active-class="active-menu-link"
           >
             <q-item-section avatar>
@@ -123,11 +124,20 @@ const menulink = ref("overview");
         </q-list>
       </q-scroll-area>
       <div class="absolute-bottom bg-transparent">
-        <q-avatar size="56px" class="q-mb-sm">
-          <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
-        </q-avatar>
-        <div class="text-weight-bold">Razvan Stoenescu</div>
-        <div>@rstoenescu</div>
+        <q-list bordered class="rounded-borders text-white">
+          <q-item
+            clickable
+            v-ripple
+            class="bg-grey-9"
+            @click="miniDrawer = !miniDrawer"
+          >
+            <q-item-section avatar>
+              <q-icon
+                :name="miniDrawer ? 'open_in_full' : 'close_fullscreen'"
+              />
+            </q-item-section>
+          </q-item>
+        </q-list>
       </div>
     </q-drawer>
     <q-page-container>
