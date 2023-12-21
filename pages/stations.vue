@@ -13,7 +13,6 @@ definePageMeta({
     <stations-filters-toolbar></stations-filters-toolbar>
     <stations-charts></stations-charts>
     <stations-table class="q-mt-md"></stations-table>
-
-    <statios-filtres-dialog></statios-filtres-dialog>
+    <stations-filters-dialog></stations-filters-dialog>
   </q-page>
 </template>
