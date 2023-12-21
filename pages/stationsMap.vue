@@ -1,19 +1,16 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: "stations",
-  path: "/stations",
-  title: "Stations",
+  name: "stations_map",
+  path: "/stations-map",
+  title: "Stations Map",
   layout: "default",
 });
 </script>
 
 <template>
   <q-page>
-    <page-title title="Stations"></page-title>
+    <page-title title="Stations Map"></page-title>
     <stations-filters-toolbar></stations-filters-toolbar>
-    <stations-charts></stations-charts>
-    <stations-table class="q-mt-md"></stations-table>
-
     <statios-filtres-dialog></statios-filtres-dialog>
   </q-page>
 </template>

@@ -4,6 +4,13 @@ export const useStationsStore = defineStore("stationsStore", {
   state: () => {
     return {
       filtersDialogState: false as boolean,
+      tableColumns: [
+        {
+          name: "desc",
+          label: "Dessert (100g serving)",
+          field: "name",
+        },
+      ],
     };
   },
   actions: {
@@ -13,5 +20,6 @@ export const useStationsStore = defineStore("stationsStore", {
   },
   getters: {
     getFiltersDialogState: (state) => state.filtersDialogState,
+    getTableColumns: (state) => state.tableColumns,
   },
 });

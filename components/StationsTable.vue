@@ -1,0 +1,133 @@
+<script lang="ts" setup>
+const columns = [
+  {
+    name: "station",
+    align: "left",
+    label: "Station",
+    field: "station",
+    sortable: true,
+  },
+  {
+    name: "location",
+    label: "Location",
+    field: "location",
+    sortable: true,
+    align: "left",
+  },
+  {
+    name: "status",
+    label: "Status",
+    field: "status",
+    sortable: true,
+    align: "center",
+  },
+  {
+    name: "isActive",
+    label: "Active",
+    field: "isActive",
+    align: "center",
+    sortable: true,
+  },
+  {
+    name: "subStatus",
+    label: "State",
+    field: "subStatus",
+    align: "center",
+    sortable: true,
+  },
+  { name: "last_ts", label: "Last DB ts", field: "last_ts", align: "center" },
+  {
+    name: "installation_date",
+    align: "center",
+    label: "Installation date",
+    field: "installation_date",
+  },
+];
+const rows = [
+  {
+    station: "STA-06-0026",
+    location: "Argolida 5",
+    status: "online",
+    isActive: true,
+    subStatus: "operational",
+    last_ts: "2023-12-01",
+    installation_date: "2023-12-01",
+  },
+  {
+    station: "STA-06-0026",
+    location: "Argolida 5",
+    status: "offline",
+    isActive: false,
+    subStatus: "lab",
+    last_ts: "2023-12-01",
+    installation_date: "2023-12-01",
+  },
+  {
+    station: "STA-06-0026",
+    location: "Argolida 5",
+    status: "offline",
+    isActive: false,
+    subStatus: "installation",
+    last_ts: "2023-12-01",
+    installation_date: "2023-12-01",
+  },
+];
+</script>
+
+<template>
+  <div class="row">
+    <div class="col-12 q-px-md">
+      <q-card flat square>
+        <q-table flat dense :rows="rows" :columns="columns" row-key="station">
+          <template v-slot:body="props">
+            <q-tr :props="props">
+              <q-td key="station" :props="props">
+                {{ props.row.station }}
+              </q-td>
+              <q-td key="location" :props="props">
+                {{ props.row.location }}
+              </q-td>
+              <q-td key="status" :props="props" auto-width>
+                <q-chip
+                  :icon="props.row.status === 'online' ? 'wifi' : 'wifi_off'"
+                  :text-color="props.row.status === 'online' ? 'green' : 'red'"
+                  square
+                  class="text-capitalize bg-transparent"
+                >
+                  {{ props.row.status }}
+                </q-chip>
+              </q-td>
+              <q-td key="isActive" :props="props">
+                <q-chip
+                  :icon="props.row.isActive ? 'podcasts' : 'portable_wifi_off'"
+                  :text-color="props.row.isActive ? 'green' : 'red'"
+                  square
+                  class="text-capitalize bg-transparent"
+                  dense
+                >
+                  {{ props.row.isActive ? "Yes" : "No" }}
+                </q-chip>
+              </q-td>
+              <q-td key="subStatus" :props="props">
+                <q-chip
+                  text-color="black"
+                  square
+                  class="text-capitalize bg-transparent"
+                  dense
+                >
+                  {{ props.row.subStatus }}
+                </q-chip>
+              </q-td>
+              <q-td key="last_ts" :props="props">
+                {{ props.row.last_ts }}
+              </q-td>
+              <q-td key="installation_date" :props="props">
+                {{ props.row.installation_date }}
+              </q-td>
+            </q-tr>
+          </template>
+        </q-table>
+      </q-card>
+    </div>
+  </div>
+</template>

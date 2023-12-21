@@ -103,6 +103,19 @@ const text = ref("");
             </q-item-section>
             <q-item-section> Stations </q-item-section>
           </q-item>
+          <q-item
+            clickable
+            v-ripple
+            exact
+            :to="{ name: 'stations_map' }"
+            :active="route.name === 'stations_map'"
+            active-class="active-menu-link"
+          >
+            <q-item-section avatar>
+              <q-icon name="public" />
+            </q-item-section>
+            <q-item-section> Stations map</q-item-section>
+          </q-item>
           <q-item clickable v-ripple>
             <q-item-section avatar>
               <q-icon name="terminal" />
