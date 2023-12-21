@@ -1,0 +1,11 @@
+@import "_variables.scss";
+
+.sidebar{
+    background-color: $layout;
+}
+
+.active-menu-link{
+    border-left: 4px solid $acitve;
+    color: white;
+    background-color:adjust-hue($color: #000000, $degrees: 0);
+}
