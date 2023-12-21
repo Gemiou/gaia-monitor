@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const expandedRange = ref(false);
+const expandedRange = ref(true);
 </script>
 <template>
   <q-expansion-item
@@ -10,7 +10,7 @@ const expandedRange = ref(false);
   >
     <q-card flat square style="height: 230px">
       <q-card-section>
-        <charts-bar></charts-bar>
+        <charts-area-spline></charts-area-spline>
       </q-card-section>
     </q-card>
   </q-expansion-item>

@@ -22,7 +22,13 @@ export default defineNuxtConfig({
       ],
     },
   },
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
   css: ["@/assets/app.scss"],
   modules: ["nuxt-quasar-ui", "@pinia/nuxt", "nuxt-lodash", "@nuxtjs/i18n"],
   quasar: {

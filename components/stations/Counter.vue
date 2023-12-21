@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const expandedCounter = ref(false);
+const expandedCounter = ref(true);
 </script>
 
 <template>

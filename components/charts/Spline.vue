@@ -81,7 +81,7 @@ onMounted(() => {
     colors: ["#2F60AD"],
     series: [
       {
-        name: "USA",
+        name: "Temp",
         data: [50, 170, 299, 438, 841],
       },
     ],
