@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const expandedTransmission = ref(true);
+const expandedTransmission = ref(false);
 </script>
 
 <template>

@@ -17,19 +17,15 @@ const text = ref("");
           class="q-mr-sm"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
-        <q-separator vertical color="white"></q-separator>
-        <span class="q-px-lg">Gaiasense</span>
-        <q-separator vertical color="white"></q-separator>
-        <span class="q-px-lg">Monitor Stations</span>
 
-        <q-space></q-space>
-
+        <q-separator vertical color="white"></q-separator>
+        <span class="q-px-md">Monitor Stations</span>
+        <q-separator vertical color="white" class="q-mx-md"></q-separator>
         <q-input
           v-model="text"
           bg-color="white"
           square
           dense
-          input-style="width:300px"
           input-class="q-px-lg"
           placeholder="Station name or location"
         >
@@ -70,13 +66,13 @@ const text = ref("");
     <q-drawer
       :mini="miniDrawer"
       show-if-above
-      :width="250"
+      :width="220"
       v-model="leftDrawerOpen"
       bordered
       class="sidebar"
     >
       <q-scroll-area class="fit">
-        <q-list bordered padding class="rounded-borders text-white">
+        <q-list padding class="rounded-borders text-white">
           <q-item
             clickable
             v-ripple
@@ -94,14 +90,14 @@ const text = ref("");
             clickable
             v-ripple
             exact
-            :to="{ name: 'stationsMap' }"
-            :active="route.name === 'stationsMap'"
+            :to="{ name: 'expoler' }"
+            :active="route.name === 'expoler'"
             active-class="active-menu-link"
           >
             <q-item-section avatar>
               <q-icon name="public" />
             </q-item-section>
-            <q-item-section> Stations map</q-item-section>
+            <q-item-section> Expoler</q-item-section>
           </q-item>
           <q-item clickable v-ripple>
             <q-item-section avatar>

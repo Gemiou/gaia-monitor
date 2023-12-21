@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const expandedRange = ref(true);
+const expandedRange = ref(false);
 </script>
 <template>
   <q-expansion-item

@@ -38,8 +38,6 @@ const station_name = ref("");
 
     <q-space></q-space>
 
-    <div class="flex q-gutter-sm">
-      <q-btn square unelevated color="blue-10" no-caps> Export CSV </q-btn>
-    </div>
+    <q-btn square unelevated color="blue-10" no-caps> Export CSV </q-btn>
   </q-toolbar>
 </template>

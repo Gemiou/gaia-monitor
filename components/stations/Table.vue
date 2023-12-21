@@ -60,6 +60,12 @@ const columns = [
     label: "Installation date",
     field: "installation_date",
   },
+  {
+    name: "actions",
+    align: "center",
+    label: "",
+    field: "actions",
+  },
 ];
 const rows = [
   {
@@ -106,7 +112,7 @@ const rows = [
           <template v-slot:body="props">
             <q-tr :props="props">
               <q-td key="station" :props="props">
-                <router-link :to="{ name: 'stationsMap' }" class="text-black">
+                <router-link :to="{ name: 'expoler' }" class="text-black">
                   {{ props.row.station }}
                 </router-link>
               </q-td>
@@ -158,6 +164,11 @@ const rows = [
               </q-td>
               <q-td key="installation_date" :props="props">
                 {{ props.row.installation_date }}
+              </q-td>
+              <q-td key="actions" :props="props">
+                <q-btn round flat color="black" icon="location_searching">
+                </q-btn>
+                <q-btn round flat color="black" icon="visibility"> </q-btn>
               </q-td>
             </q-tr>
           </template>

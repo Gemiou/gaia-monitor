@@ -75,6 +75,8 @@ const options = ref([
         </p>
         <q-input
           prefix="From:"
+          bg-color="white"
+          outlined
           dense
           square
           v-model="from_date_install"
@@ -92,6 +94,8 @@ const options = ref([
         <q-input
           class="q-mt-sm"
           prefix="To:"
+          bg-color="white"
+          outlined
           dense
           square
           v-model="to_date_install"

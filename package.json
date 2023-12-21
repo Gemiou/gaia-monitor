@@ -24,6 +24,7 @@
     "@quasar/extras": "^1.16.9",
     "axios": "^1.6.2",
     "highcharts": "^11.2.0",
+    "mapbox-gl": "^3.0.1",
     "nuxt-lodash": "^2.5.3",
     "pinia": "^2.1.7",
     "quasar": "^2.14.2"
