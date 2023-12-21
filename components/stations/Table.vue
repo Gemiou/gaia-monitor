@@ -35,6 +35,18 @@ const columns = [
     align: "center",
     sortable: true,
   },
+  {
+    name: "temp",
+    align: "center",
+    label: "Temp",
+    field: "temp",
+  },
+  {
+    name: "pressure",
+    align: "center",
+    label: "Pressure",
+    field: "pressure",
+  },
   { name: "last_ts", label: "Last DB ts", field: "last_ts", align: "center" },
   {
     name: "installation_date",
@@ -50,6 +62,8 @@ const rows = [
     status: "online",
     isActive: true,
     subStatus: "operational",
+    temp: [],
+    pressure: [],
     last_ts: "2023-12-01",
     installation_date: "2023-12-01",
   },
@@ -59,6 +73,8 @@ const rows = [
     status: "offline",
     isActive: false,
     subStatus: "lab",
+    temp: [],
+    pressure: [],
     last_ts: "2023-12-01",
     installation_date: "2023-12-01",
   },
@@ -68,6 +84,8 @@ const rows = [
     status: "offline",
     isActive: false,
     subStatus: "installation",
+    temp: [],
+    pressure: [],
     last_ts: "2023-12-01",
     installation_date: "2023-12-01",
   },
@@ -117,6 +135,12 @@ const rows = [
                 >
                   {{ props.row.subStatus }}
                 </q-chip>
+              </q-td>
+              <q-td key="temp" :props="props">
+                <charts-spline></charts-spline
+              ></q-td>
+              <q-td key="pressure" :props="props">
+                <charts-spline></charts-spline>
               </q-td>
               <q-td key="last_ts" :props="props">
                 {{ props.row.last_ts }}
