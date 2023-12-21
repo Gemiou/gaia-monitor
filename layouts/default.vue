@@ -81,19 +81,6 @@ const text = ref("");
             clickable
             v-ripple
             exact
-            :to="{ name: 'overview' }"
-            :active="route.name === 'overview'"
-            active-class="active-menu-link"
-          >
-            <q-item-section avatar>
-              <q-icon name="dashboard" />
-            </q-item-section>
-            <q-item-section> Overview </q-item-section>
-          </q-item>
-          <q-item
-            clickable
-            v-ripple
-            exact
             :to="{ name: 'stations' }"
             :active="route.name === 'stations'"
             active-class="active-menu-link"

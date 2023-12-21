@@ -47,6 +47,12 @@ const columns = [
     label: "Pressure",
     field: "pressure",
   },
+  {
+    name: "pv",
+    align: "center",
+    label: "PV",
+    field: "pv",
+  },
   { name: "last_ts", label: "Last DB ts", field: "last_ts", align: "center" },
   {
     name: "installation_date",
@@ -96,7 +102,7 @@ const rows = [
   <div class="row">
     <div class="col-12 q-px-md">
       <q-card flat square>
-        <q-table flat dense :rows="rows" :columns="columns" row-key="station">
+        <q-table flat :rows="rows" :columns="columns" row-key="station">
           <template v-slot:body="props">
             <q-tr :props="props">
               <q-td key="station" :props="props">
@@ -140,6 +146,9 @@ const rows = [
                 <charts-spline></charts-spline
               ></q-td>
               <q-td key="pressure" :props="props">
+                <charts-spline></charts-spline>
+              </q-td>
+              <q-td key="pv" :props="props">
                 <charts-spline></charts-spline>
               </q-td>
               <q-td key="last_ts" :props="props">
