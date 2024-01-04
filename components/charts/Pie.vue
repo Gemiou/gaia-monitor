@@ -26,9 +26,7 @@ onMounted(() => {
       pie: {
         allowPointSelect: true,
         cursor: "pointer",
-
-        responsive: true,
-
+        responsive: false,
         showInLegend: true,
       },
       series: {
@@ -74,6 +72,6 @@ onMounted(() => {
 
 <style lang="scss">
 #pie_container {
-  height: 200px;
+  height: 240px;
 }
 </style>

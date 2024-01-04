@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import Highcharts from "highcharts";
-const pie_container = ref(null);
+const area_container = ref(null);
 onMounted(() => {
-  Highcharts.chart(pie_container.value, {
+  Highcharts.chart(area_container.value, {
     chart: {
       type: "areaspline",
-
       plotBackgroundColor: null,
       plotBorderWidth: null,
       plotShadow: false,
@@ -41,6 +40,7 @@ onMounted(() => {
       },
     },
     plotOptions: {
+      responsive: true,
       series: {
         pointStart: 2000,
       },
@@ -65,11 +65,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="pie_container" ref="pie_container"></div>
+  <div id="area_container" ref="area_container"></div>
 </template>
 
 <style lang="scss">
-#pie_container {
-  height: 200px;
+#area_container {
+  height: 240px;
 }
 </style>

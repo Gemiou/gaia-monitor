@@ -2,7 +2,7 @@
 
 <template>
   <div class="row q-col-gutter-md">
-    <div class="col-2">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2">
       <q-card flat square class="q-pa-lg">
         <div class="text-weight-light text-h6">Stations</div>
         <q-separator class="q-my-md"></q-separator>
@@ -12,7 +12,7 @@
         </div>
       </q-card>
     </div>
-    <div class="col-3">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
       <q-card flat square class="q-pa-lg">
         <div class="text-weight-light text-h6">Status</div>
         <q-separator class="q-my-md"></q-separator>
@@ -28,7 +28,7 @@
         </div>
       </q-card>
     </div>
-    <div class="col-3">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
       <q-card flat square class="q-pa-lg">
         <div class="text-weight-light text-h6">Active</div>
         <q-separator class="q-my-md"></q-separator>
@@ -46,7 +46,7 @@
         </div>
       </q-card>
     </div>
-    <div class="col-4">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
       <q-card flat square class="q-pa-lg">
         <div class="text-weight-light text-h6">State</div>
         <q-separator class="q-my-md"></q-separator>
