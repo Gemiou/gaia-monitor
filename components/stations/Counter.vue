@@ -9,7 +9,7 @@ const expandedCounter = ref(true);
     label="Stations statistics"
     class="bg-white text-weight-bold"
   >
-    <q-card flat square style="height: 260px" class="q-px-md">
+    <q-card flat square style="height: 260px" class="q-px-lg">
       <div class="text-weight-light text-h6">Total</div>
       <div class="text-h4 text-weight-medium">320</div>
       <q-separator class="q-my-md"></q-separator>
