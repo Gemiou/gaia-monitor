@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
   name: "stations",
-  path: "/stations",
   title: "Stations",
+  path: "/stations",
   layout: "default",
 });
 </script>

@@ -7,7 +7,7 @@ const text = ref("");
 
 <template>
   <q-layout view="hHh LpR fFf" class="body">
-    <q-header class="header text-white">
+    <q-header class="header text-white z-max">
       <q-toolbar class="q-pa-sm">
         <q-btn
           dense
