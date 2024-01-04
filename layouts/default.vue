@@ -90,8 +90,8 @@ const text = ref("");
             clickable
             v-ripple
             exact
-            :to="{ name: 'expoler' }"
-            :active="route.name === 'expoler'"
+            :to="{ name: 'explorer' }"
+            :active="route.name === 'explorer'"
             active-class="active-menu-link"
           >
             <q-item-section avatar>
