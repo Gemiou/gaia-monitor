@@ -1,16 +1,9 @@
-<script lang="ts" setup>
-const expandedTransmission = ref(true);
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <q-expansion-item
-    expand-separator
-    v-model="expandedTransmission"
-    label="Transmission analysis"
-    class="bg-white text-weight-bold"
-  >
-    <q-card flat square>
-      <charts-pie></charts-pie>
-    </q-card>
-  </q-expansion-item>
+  <q-card flat square class="q-pa-lg">
+    <div class="text-weight-light text-h6">Transmission analysis</div>
+    <q-separator class="q-my-md"></q-separator>
+    <charts-pie></charts-pie>
+  </q-card>
 </template>

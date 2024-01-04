@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-const expandedCounter = ref(true);
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="row q-col-gutter-md">
