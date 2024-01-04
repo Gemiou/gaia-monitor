@@ -5,7 +5,7 @@ onMounted(() => {
   Highcharts.chart(pie_container.value, {
     chart: {
       type: "pie",
-      height: 200,
+      height: 220,
       plotBackgroundColor: null,
       plotBorderWidth: null,
       plotShadow: false,
@@ -19,17 +19,17 @@ onMounted(() => {
 
     tooltip: {
       valueDecimals: 2,
-      valueSuffix: " TWh",
+      valueSuffix: "TWh",
     },
 
     plotOptions: {
       pie: {
         allowPointSelect: true,
         cursor: "pointer",
-        size: 150,
-        responsive: true,
 
-        showInLegend: true,
+        responsive: false,
+
+        showInLegend: false,
       },
       series: {
         borderWidth: 0,

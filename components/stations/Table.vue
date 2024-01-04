@@ -2,6 +2,7 @@
 import { useStationsStore } from "~/store/stations";
 const stationsStore = useStationsStore();
 const loadingStations = ref(true);
+const station_name = ref("");
 stationsStore.setStations().then(() => {
   loadingStations.value = false;
 });
@@ -57,16 +58,47 @@ stationsStore.setStations().then(() => {
           </tr>
         </tbody>
       </q-markup-table>
-      <q-card flat square v-else>
+      <q-card flat square v-if="!loadingStations">
         <q-table
           flat
           :columns="stationsStore.getTableColumns"
           :rows="stationsStore.getStations"
           row-key="station"
         >
-          <template v-slot:top="props">
-            <span class="text-weight-bold">Stations</span>
+          <template #top>
+            <span class="text-weight-bold q-mr-md">Stations</span>
+            <q-input
+              placeholder="Type station name"
+              outlined
+              dense
+              square
+              v-model="station_name"
+            >
+              <template v-slot:append>
+                <q-icon
+                  v-if="station_name !== ''"
+                  name="close"
+                  @click="station_name = ''"
+                  class="cursor-pointer"
+                />
+                <q-icon name="search" />
+              </template>
+            </q-input>
+            <q-space></q-space>
+            <q-btn
+              square
+              flat
+              color="black"
+              no-caps
+              icon="tune"
+              @click="stationsStore.setFiltersDialogState"
+            >
+            </q-btn>
+            <q-btn square unelevated color="blue-10" no-caps>
+              Export CSV
+            </q-btn>
           </template>
+
           <template v-slot:body="props">
             <q-tr :props="props">
               <q-td key="station" :props="props">
@@ -95,7 +127,7 @@ stationsStore.setStations().then(() => {
                   class="text-capitalize bg-transparent"
                   dense
                 >
-                  {{ props.row.isActive ? "Yes" : "No" }}
+                  {{ props.row.isActive ? "Active" : "Inactive" }}
                 </q-chip>
               </q-td>
               <q-td key="subStatus" :props="props">
@@ -129,6 +161,48 @@ stationsStore.setStations().then(() => {
                 <q-btn round flat color="black" icon="visibility"> </q-btn>
               </q-td>
             </q-tr>
+          </template>
+
+          <template #bottom>
+            <div class="flex justify-between full-width q-pa-sm">
+              <div>
+                <span class="text-primary">Total:</span>
+                <span class="q-ml-xs text-weight-bold"> 100</span>
+              </div>
+              <div class="q-gutter-x-xs">
+                <span class="q-ml-sm text-primary">Page:</span>
+                <span class="q-mx-sm text-primary"> 2 / 20</span>
+
+                <q-btn
+                  icon="first_page"
+                  color="black"
+                  size="xs"
+                  round
+                  unelevated
+                />
+                <q-btn
+                  icon="chevron_left"
+                  color="black"
+                  size="xs"
+                  round
+                  unelevated
+                />
+                <q-btn
+                  icon="chevron_right"
+                  color="black"
+                  size="xs"
+                  round
+                  unelevated
+                />
+                <q-btn
+                  icon="last_page"
+                  color="black"
+                  size="xs"
+                  round
+                  unelevated
+                />
+              </div>
+            </div>
           </template>
         </q-table>
       </q-card>

@@ -16,7 +16,7 @@ onMounted(() => {
 
 <template>
   <div class="row">
-    <div class="col-12 q-pa-md">
+    <div class="col-12 q-px-md">
       <div ref="mapContainer" class="map-container"></div>
     </div>
   </div>
