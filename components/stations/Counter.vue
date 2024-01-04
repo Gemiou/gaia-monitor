@@ -57,7 +57,7 @@ const expandedCounter = ref(true);
                   text-color="white"
                   class="text-capitalize text-weight-bold"
                 >
-                  20 NO
+                  20 No
                 </q-chip>
               </div>
               <div class="q-mt-sm">
