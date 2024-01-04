@@ -60,8 +60,10 @@ stationsStore.setStations().then(() => {
       </q-markup-table>
       <q-card flat square v-if="!loadingStations">
         <q-table
+          :grid="$q.screen.xs"
           flat
           dense
+          :bordered="$q.screen.xs"
           hide-pagination
           :rows-per-page-options="[10]"
           :columns="stationsStore.getTableColumns"

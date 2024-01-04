@@ -53,6 +53,7 @@ onMounted(() => {
       tickPositions: [0],
     },
     plotOptions: {
+      responsive: true,
       series: {
         animation: false,
         lineWidth: 2,
