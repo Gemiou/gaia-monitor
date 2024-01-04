@@ -13,62 +13,57 @@ const expandedCounter = ref(true);
       <q-card-section>
         <div class="row">
           <div class="col-12">
-            <div>
-              <div>Total</div>
-              <div class="text-h5">320</div>
+            <div class="text-h5 text-weight-light">
+              Total:<span class="text-h5 text-weight-medium"> 320</span>
             </div>
-            <q-separator class="q-my-sm"></q-separator>
+            <q-separator class="q-my-md"></q-separator>
             <div class="flex col-q-gutter-lg">
               <div class="q-mr-lg">
-                <div>Status</div>
+                <div class="text-weight-bold">Status</div>
                 <q-chip
-                  size="12px"
+                  size="14px"
                   square
                   color="black"
                   text-color="white"
-                  icon-right="wifi"
                   class="text-capitalize text-weight-bold"
                 >
-                  10
+                  10 Online
                 </q-chip>
                 <q-chip
                   square
-                  size="12px"
+                  size="14px"
                   color="black"
                   text-color="white"
-                  icon-right="wifi_off"
                   class="text-capitalize text-weight-bold"
                 >
-                  20</q-chip
+                  20 Offline</q-chip
                 >
               </div>
               <div>
-                <div>Active</div>
+                <div class="text-weight-bold">Active</div>
                 <q-chip
-                  size="12px"
+                  size="14px"
                   square
                   color="black"
                   text-color="white"
-                  icon-right="podcasts"
                   class="text-capitalize text-weight-bold"
                 >
-                  10
+                  10 Yes
                 </q-chip>
                 <q-chip
-                  size="12px"
+                  size="14px"
                   square
                   color="black"
                   text-color="white"
-                  icon-right="portable_wifi_off"
                   class="text-capitalize text-weight-bold"
                 >
-                  20
+                  20 NO
                 </q-chip>
               </div>
-              <div>
-                <div>State</div>
+              <div class="q-mt-sm">
+                <div class="text-weight-bold">State</div>
                 <q-chip
-                  size="12px"
+                  size="14px"
                   square
                   color="black"
                   text-color="white"
@@ -77,7 +72,7 @@ const expandedCounter = ref(true);
                   10 operational
                 </q-chip>
                 <q-chip
-                  size="12px"
+                  size="14px"
                   square
                   color="black"
                   text-color="white"
@@ -86,7 +81,7 @@ const expandedCounter = ref(true);
                   20 lab
                 </q-chip>
                 <q-chip
-                  size="12px"
+                  size="14px"
                   square
                   color="black"
                   text-color="white"
