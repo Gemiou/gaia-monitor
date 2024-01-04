@@ -26,6 +26,7 @@ const options = ref([
   <q-dialog v-model="stationsStore.getFiltersDialogState" persistent square>
     <q-card style="width: 400px">
       <q-bar class="bg-white q-py-lg">
+        <span>Station Filters</span>
         <q-space />
 
         <q-btn
@@ -38,7 +39,7 @@ const options = ref([
         </q-btn>
       </q-bar>
 
-      <q-card-section>
+      <q-card-section class="q-mb-md">
         <p class="text-weight-bold q-mb-none">Status</p>
         <p class="q-pt-none">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -109,9 +110,34 @@ const options = ref([
           </q-popup-proxy>
         </q-input>
       </q-card-section>
-      <q-card-actions class="q-mt-sm">
+      <q-card-actions class="q-mt-sm q-pa-none">
+        <q-btn
+          square
+          unelevated
+          color="grey-9"
+          stretch
+          class="text-weight-light"
+          no-caps
+          size="large"
+          style="width: 50%"
+        >
+          Clear filters
+        </q-btn>
         <q-space></q-space>
-        <q-btn square unelevated color="blue-10" no-caps> Apply filters </q-btn>
+
+        <q-btn
+          square
+          unelevated
+          color="blue-10"
+          class="text-weight-light"
+          stretch
+          block
+          no-caps
+          style="width: 50%"
+          size="large"
+        >
+          Apply filters
+        </q-btn>
       </q-card-actions>
     </q-card>
   </q-dialog>

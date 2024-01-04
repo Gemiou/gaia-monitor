@@ -10,7 +10,7 @@ stationsStore.setStations().then(() => {
 
 <template>
   <div class="row">
-    <div class="col-12 q-px-md">
+    <div class="col-12 q-px-md q-mb-md">
       <q-markup-table flat v-if="loadingStations">
         <thead>
           <tr>
@@ -61,6 +61,9 @@ stationsStore.setStations().then(() => {
       <q-card flat square v-if="!loadingStations">
         <q-table
           flat
+          dense
+          hide-pagination
+          :rows-per-page-options="[10]"
           :columns="stationsStore.getTableColumns"
           :rows="stationsStore.getStations"
           row-key="station"

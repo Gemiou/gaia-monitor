@@ -68,7 +68,6 @@ const text = ref("");
       show-if-above
       :width="220"
       v-model="leftDrawerOpen"
-      bordered
       class="sidebar"
     >
       <q-scroll-area class="fit">

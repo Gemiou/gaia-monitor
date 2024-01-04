@@ -1,35 +1,112 @@
 [
-    {
-      "station": "STA-06-0026",
-      "location": "Argolida 5",
-      "status": "online",
-      "isActive": true,
-      "subStatus": "operational",
-      "temp": [],
-      "pressure": [],
-      "last_ts": "2023-12-01",
-      "installation_date": "2023-12-01"
-    },
-    {
-      "station": "STA-06-0026",
-      "location": "Argolida 5",
-      "status": "offline",
-      "isActive": false,
-      "subStatus": "lab",
-      "temp": [],
-      "pressure": [],
-      "last_ts": "2023-12-01",
-      "installation_date": "2023-12-01"
-    },
-    {
-      "station": "STA-06-0026",
-      "location": "Argolida 5",
-      "status": "offline",
-      "isActive": false,
-      "subStatus": "installation",
-      "temp": [],
-      "pressure": [],
-      "last_ts": "2023-12-01",
-      "installation_date": "2023-12-01"
-    }
-  ]
+  {
+    "station": "STA-06-0026",
+    "location": "Argolida 5",
+    "status": "online",
+    "isActive": true,
+    "subStatus": "operational",
+    "temp": [],
+    "pressure": [],
+    "last_ts": "2023-12-01",
+    "installation_date": "2023-12-01"
+  },
+  {
+    "station": "STA-06-0026",
+    "location": "Argolida 5",
+    "status": "offline",
+    "isActive": false,
+    "subStatus": "lab",
+    "temp": [],
+    "pressure": [],
+    "last_ts": "2023-12-01",
+    "installation_date": "2023-12-01"
+  },
+  {
+    "station": "STA-06-0026",
+    "location": "Argolida 5",
+    "status": "offline",
+    "isActive": false,
+    "subStatus": "installation",
+    "temp": [],
+    "pressure": [],
+    "last_ts": "2023-12-01",
+    "installation_date": "2023-12-01"
+  },
+  {
+    "station": "STA-06-0026",
+    "location": "Argolida 5",
+    "status": "offline",
+    "isActive": false,
+    "subStatus": "installation",
+    "temp": [],
+    "pressure": [],
+    "last_ts": "2023-12-01",
+    "installation_date": "2023-12-01"
+  },
+  {
+    "station": "STA-06-0026",
+    "location": "Argolida 5",
+    "status": "offline",
+    "isActive": false,
+    "subStatus": "installation",
+    "temp": [],
+    "pressure": [],
+    "last_ts": "2023-12-01",
+    "installation_date": "2023-12-01"
+  },
+  {
+    "station": "STA-06-0026",
+    "location": "Argolida 5",
+    "status": "offline",
+    "isActive": false,
+    "subStatus": "installation",
+    "temp": [],
+    "pressure": [],
+    "last_ts": "2023-12-01",
+    "installation_date": "2023-12-01"
+  },
+  {
+    "station": "STA-06-0026",
+    "location": "Argolida 5",
+    "status": "offline",
+    "isActive": false,
+    "subStatus": "installation",
+    "temp": [],
+    "pressure": [],
+    "last_ts": "2023-12-01",
+    "installation_date": "2023-12-01"
+  },
+  {
+    "station": "STA-06-0026",
+    "location": "Argolida 5",
+    "status": "offline",
+    "isActive": false,
+    "subStatus": "installation",
+    "temp": [],
+    "pressure": [],
+    "last_ts": "2023-12-01",
+    "installation_date": "2023-12-01"
+  },
+  {
+    "station": "STA-06-0026",
+    "location": "Argolida 5",
+    "status": "offline",
+    "isActive": false,
+    "subStatus": "installation",
+    "temp": [],
+    "pressure": [],
+    "last_ts": "2023-12-01",
+    "installation_date": "2023-12-01"
+  },
+  {
+    "station": "STA-06-0026",
+    "location": "Argolida 5",
+    "status": "offline",
+    "isActive": false,
+    "subStatus": "installation",
+    "temp": [],
+    "pressure": [],
+    "last_ts": "2023-12-01",
+    "installation_date": "2023-12-01"
+  }
+]
