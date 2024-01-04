@@ -7,7 +7,7 @@ const expandedTransmission = ref(true);
     expand-separator
     v-model="expandedTransmission"
     label="Transmission analysis"
-    class="bg-white"
+    class="bg-white text-weight-bold"
   >
     <q-card flat square style="height: 230px">
       <q-card-section>

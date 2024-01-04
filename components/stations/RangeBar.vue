@@ -6,7 +6,7 @@ const expandedRange = ref(true);
     expand-separator
     v-model="expandedRange"
     label="Out of range sensors"
-    class="bg-white"
+    class="bg-white text-weight-bold"
   >
     <q-card flat square style="height: 230px">
       <q-card-section>

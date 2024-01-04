@@ -7,7 +7,7 @@ const expandedCounter = ref(true);
     expand-separator
     v-model="expandedCounter"
     label="Stations statistics"
-    class="bg-white"
+    class="bg-white text-weight-bold"
   >
     <q-card flat square style="height: 230px">
       <q-card-section>

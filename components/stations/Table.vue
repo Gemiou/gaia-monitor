@@ -109,6 +109,9 @@ const rows = [
     <div class="col-12 q-px-md">
       <q-card flat square>
         <q-table flat :rows="rows" :columns="columns" row-key="station">
+          <template v-slot:top="props">
+            <span class="text-weight-bold">Stations</span>
+          </template>
           <template v-slot:body="props">
             <q-tr :props="props">
               <q-td key="station" :props="props">
