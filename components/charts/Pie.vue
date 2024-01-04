@@ -5,7 +5,7 @@ onMounted(() => {
   Highcharts.chart(pie_container.value, {
     chart: {
       type: "pie",
-      height: 220,
+
       plotBackgroundColor: null,
       plotBorderWidth: null,
       plotShadow: false,
@@ -27,15 +27,14 @@ onMounted(() => {
         allowPointSelect: true,
         cursor: "pointer",
 
-        responsive: false,
+        responsive: true,
 
-        showInLegend: false,
+        showInLegend: true,
       },
       series: {
         borderWidth: 0,
         colorByPoint: true,
         type: "pie",
-
         innerSize: "80%",
         dataLabels: {
           enabled: true,

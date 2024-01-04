@@ -5,7 +5,7 @@ onMounted(() => {
   Highcharts.chart(pie_container.value, {
     chart: {
       type: "areaspline",
-      height: 220,
+
       plotBackgroundColor: null,
       plotBorderWidth: null,
       plotShadow: false,

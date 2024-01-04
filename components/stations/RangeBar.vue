@@ -8,7 +8,7 @@ const expandedRange = ref(true);
     label="Out of range sensors"
     class="bg-white text-weight-bold"
   >
-    <q-card flat square style="height: 260px">
+    <q-card flat square>
       <charts-area-spline></charts-area-spline>
     </q-card>
   </q-expansion-item>

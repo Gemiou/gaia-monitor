@@ -9,7 +9,7 @@ const expandedTransmission = ref(true);
     label="Transmission analysis"
     class="bg-white text-weight-bold"
   >
-    <q-card flat square style="height: 260px">
+    <q-card flat square>
       <charts-pie></charts-pie>
     </q-card>
   </q-expansion-item>
