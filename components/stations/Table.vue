@@ -59,7 +59,7 @@ stationsStore.setStations().then(() => {
         </tbody>
       </q-markup-table>
       <q-card flat square v-if="!loadingStations" class="q-pa-md">
-        <q-card-actions>
+        <q-card-actions class="q-mb-sm">
           <span class="text-weight-bold q-mr-md">Stations</span>
           <q-input
             placeholder="Type station name"
@@ -90,7 +90,7 @@ stationsStore.setStations().then(() => {
           </q-btn>
           <q-btn square unelevated color="blue-10" no-caps> Export CSV </q-btn>
         </q-card-actions>
-        <q-separator class="q-my-md"></q-separator>
+
         <q-table
           :grid="$q.screen.xs"
           flat
@@ -102,6 +102,18 @@ stationsStore.setStations().then(() => {
           :rows="stationsStore.getStations"
           row-key="station"
         >
+          <template v-slot:header="props">
+            <q-tr :props="props">
+              <q-th
+                v-for="col in props.cols"
+                :key="col.name"
+                :props="props"
+                class="text-h6 bg-grey-2"
+              >
+                {{ col.label }}
+              </q-th>
+            </q-tr>
+          </template>
           <template v-slot:body="props">
             <q-tr :props="props">
               <q-td key="station" :props="props">
