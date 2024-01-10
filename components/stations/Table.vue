@@ -58,7 +58,39 @@ stationsStore.setStations().then(() => {
           </tr>
         </tbody>
       </q-markup-table>
-      <q-card flat square v-if="!loadingStations">
+      <q-card flat square v-if="!loadingStations" class="q-pa-md">
+        <q-card-actions>
+          <span class="text-weight-bold q-mr-md">Stations</span>
+          <q-input
+            placeholder="Type station name"
+            outlined
+            dense
+            square
+            v-model="station_name"
+          >
+            <template v-slot:append>
+              <q-icon
+                v-if="station_name !== ''"
+                name="close"
+                @click="station_name = ''"
+                class="cursor-pointer"
+              />
+              <q-icon name="search" />
+            </template>
+          </q-input>
+          <q-space></q-space>
+          <q-btn
+            square
+            flat
+            color="black"
+            no-caps
+            icon="tune"
+            @click="stationsStore.setFiltersDialogState"
+          >
+          </q-btn>
+          <q-btn square unelevated color="blue-10" no-caps> Export CSV </q-btn>
+        </q-card-actions>
+        <q-separator class="q-my-md"></q-separator>
         <q-table
           :grid="$q.screen.xs"
           flat
@@ -70,45 +102,11 @@ stationsStore.setStations().then(() => {
           :rows="stationsStore.getStations"
           row-key="station"
         >
-          <template #top>
-            <span class="text-weight-bold q-mr-md">Stations</span>
-            <q-input
-              placeholder="Type station name"
-              outlined
-              dense
-              square
-              v-model="station_name"
-            >
-              <template v-slot:append>
-                <q-icon
-                  v-if="station_name !== ''"
-                  name="close"
-                  @click="station_name = ''"
-                  class="cursor-pointer"
-                />
-                <q-icon name="search" />
-              </template>
-            </q-input>
-            <q-space></q-space>
-            <q-btn
-              square
-              flat
-              color="black"
-              no-caps
-              icon="tune"
-              @click="stationsStore.setFiltersDialogState"
-            >
-            </q-btn>
-            <q-btn square unelevated color="blue-10" no-caps>
-              Export CSV
-            </q-btn>
-          </template>
-
           <template v-slot:body="props">
             <q-tr :props="props">
               <q-td key="station" :props="props">
                 <router-link
-                  :to="{ name: 'station', params: { id: '22' } }"
+                  :to="{ name: 'station', params: { id: props.row.station } }"
                   class="text-black"
                 >
                   {{ props.row.station }}
@@ -172,43 +170,48 @@ stationsStore.setStations().then(() => {
           </template>
 
           <template #bottom>
-            <div class="flex justify-between full-width q-pa-sm">
+            <div class="flex justify-between full-width q-pt-sm">
               <div>
-                <span class="text-primary">Total:</span>
-                <span class="q-ml-xs text-weight-bold"> 100</span>
+                <span class="text-primary text-body1">Total:</span>
+                <span class="q-ml-xs text-weight-bold text-body1"> 100</span>
               </div>
-              <div class="q-gutter-x-xs">
-                <span class="q-ml-sm text-primary">Page:</span>
-                <span class="q-mx-sm text-primary"> 2 / 20</span>
-
-                <q-btn
-                  icon="first_page"
-                  color="black"
-                  size="xs"
-                  round
-                  unelevated
-                />
-                <q-btn
-                  icon="chevron_left"
-                  color="black"
-                  size="xs"
-                  round
-                  unelevated
-                />
-                <q-btn
-                  icon="chevron_right"
-                  color="black"
-                  size="xs"
-                  round
-                  unelevated
-                />
-                <q-btn
-                  icon="last_page"
-                  color="black"
-                  size="xs"
-                  round
-                  unelevated
-                />
+              <div class="q-gutter-x-md flex">
+                <div>
+                  <span class="q-mx-sm text-primary text-body1">
+                    2 of <span class="text-weight-bold">20 page</span></span
+                  >
+                </div>
+                <q-separator vertical></q-separator>
+                <div class="q-gutter-x-xs">
+                  <q-btn
+                    icon="first_page"
+                    color="black"
+                    size="xs"
+                    round
+                    unelevated
+                  />
+                  <q-btn
+                    icon="chevron_left"
+                    color="black"
+                    size="xs"
+                    round
+                    unelevated
+                  />
+                  <q-btn
+                    icon="chevron_right"
+                    color="black"
+                    size="xs"
+                    round
+                    unelevated
+                  />
+                  <q-btn
+                    icon="last_page"
+                    color="black"
+                    size="xs"
+                    round
+                    unelevated
+                  />
+                </div>
               </div>
             </div>
           </template>

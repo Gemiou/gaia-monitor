@@ -70,6 +70,6 @@ onMounted(() => {
 
 <style lang="scss">
 #area_container {
-  height: 240px;
+  height: 230px;
 }
 </style>
