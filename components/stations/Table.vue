@@ -129,6 +129,7 @@ stationsStore.setStations().then(() => {
               </q-td>
               <q-td key="status" :props="props" auto-width>
                 <q-chip
+                  dense
                   :icon="props.row.status === 'online' ? 'wifi' : 'wifi_off'"
                   :text-color="props.row.status === 'online' ? 'green' : 'red'"
                   square
