@@ -1,0 +1,23 @@
+[
+  {
+    "level": "Debug",
+    "env": "production",
+    "message" : "Debug message",
+    "description": "org.apache.logging.log4j.spi.AbstractLogger",
+    "time": "2023-12-01"
+  },
+  {
+    "level": "Error",
+    "env": "production",
+    "message" : "Error message",
+    "description": "org.apache.logging.log4j.spi.AbstractLogger",
+    "time": "2023-12-01"
+  },
+  {
+    "level": "Warning",
+    "env": "production",
+    "message" : "Warning message",
+    "description": "org.apache.logging.log4j.spi.AbstractLogger",
+    "time": "2023-12-01"
+  }
+]

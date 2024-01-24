@@ -76,6 +76,19 @@ const text = ref("");
             clickable
             v-ripple
             exact
+            :to="{ name: 'overview' }"
+            :active="route.name === 'overview'"
+            active-class="active-menu-link"
+          >
+            <q-item-section avatar>
+              <q-icon name="query_stats" />
+            </q-item-section>
+            <q-item-section> Overview </q-item-section>
+          </q-item>
+          <q-item
+            clickable
+            v-ripple
+            exact
             :to="{ name: 'stations' }"
             :active="route.name === 'stations'"
             active-class="active-menu-link"
@@ -98,11 +111,18 @@ const text = ref("");
             </q-item-section>
             <q-item-section> Expoler</q-item-section>
           </q-item>
-          <q-item clickable v-ripple>
+          <q-item
+            clickable
+            v-ripple
+            exact
+            :to="{ name: 'logs' }"
+            :active="route.name === 'logs'"
+            active-class="active-menu-link"
+          >
             <q-item-section avatar>
               <q-icon name="terminal" />
             </q-item-section>
-            <q-item-section> Console </q-item-section>
+            <q-item-section> Logs </q-item-section>
           </q-item>
           <q-item clickable v-ripple>
             <q-item-section avatar>
